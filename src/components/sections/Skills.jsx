@@ -7,7 +7,7 @@ import FadeIn from '../animations/FadeIn';
 const Skills = () => {
 
     //Categorize Skills
-    const skillCategoies = {
+    const skillCategories = {
         'Frontend development':[
             skills.find (s => s.name === 'React.js'),
             skills.find (s => s.name === 'Javascript'),
