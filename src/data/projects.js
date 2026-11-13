@@ -4,7 +4,7 @@ export const projects = [
         title: 'E-Commerce Platform',
         description: 'This is the first project.',
         image: 'https://via.placeholder.com/150',
-        category: 'Full Stack ',
+        category: 'Full Stack',
         technologies: ['React', 'Node.js', 'Express'],
         metrics: '40% increase in completion',
         demoUrl: 'https://example.com/demo1',

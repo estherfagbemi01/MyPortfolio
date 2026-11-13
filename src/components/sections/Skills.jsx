@@ -77,7 +77,7 @@ const Skills = () => {
             ([category, categorySkills], categoryIndex) => {
               return (
                 <FadeIn key={category} delay={categoryIndex * 100}>
-                  <div className="relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 group">
+                  <div className="relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 group " style={{ minHeight: "312px" }}>
                     <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
                       <div className="w-1 h-8 bg-linear-to-b from-primary/30 to primary/10 rounded-full"></div>
                       <h3 className="text-xl font-medium text-white">{category}</h3>
@@ -86,7 +86,7 @@ const Skills = () => {
                     {/* Skills list */}
                     <div className="space-y-5">
                       {categorySkills.map((skill) => {
-                        const IconComponent = Icons[skill.icon] || Icons.Code2;
+                        const IconComponent = Icons[skill.icons] || Icons.Code2;
                         const proficiency = getProficiencyLevel(skill.level);
 
                         return (
@@ -113,9 +113,9 @@ const Skills = () => {
                               </span>
                             </div>
 
-                            <div className="h-2 w-full overflow-hidden rounded-full bg-white/5">
+                            <div className="relative h-1.5 bg-white/5 rounded-full overflow-hidden">
                               <div
-                                className="h-full rounded-full bg-linear-to-r from-primary to-cyan-400"
+                                className="absolute top-0 left-0 h-full rounded-full bg-linear-to-r from-primary to-cyan-400 transition-all duration-100 ease-out"
                                 style={{ width: `${proficiency}%` }}
                               ></div>
                             </div>
@@ -125,7 +125,7 @@ const Skills = () => {
                     </div>
 
                     {/*Hover Glow Effect */}
-                    <div className=""></div>
+                    <div className="absolute inset bg-linear-to-br from-primary/0 to-primary/5 group-hover:from-primary/5 group-hover:to-primary/5 rounded-2xl transition-all duration-300 pointer-events-none"></div>
                   </div>
                 </FadeIn>
               );
